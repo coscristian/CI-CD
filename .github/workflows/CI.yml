@@ -17,4 +17,7 @@ jobs: # Tareas que voy a ejecutar
                 dotnet-version: '8.0'
             
             - name: Verificar versión de Net Core
-              run: dotnet --version #Mi comando especifico              
+              run: dotnet --version #Mi comando especifico  
+
+            - name: Compilar el proyecto
+              run: dotnet build             
