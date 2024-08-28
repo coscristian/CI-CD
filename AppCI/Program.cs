@@ -1,2 +1,1 @@
-﻿Console.WriteLine("Hello, Prueba World nuevo nuevo!");
-xcvcxcv
+﻿Console.WriteLine("Se soluciona el error!");
