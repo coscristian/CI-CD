@@ -1,0 +1,20 @@
+﻿name: CI
+on:
+    pull_request:
+        branches: [ 'main', 'master'] #Ramas que quiero que dispare el PR automatico
+jobs: # Tareas que voy a ejecutar
+    build:
+        runs-on: ubuntu-latest # Sobre qué puede correr
+        steps:
+            # Paso 1. Clonar el proyecto
+            - name: Descargar el proyecto
+              uses: actions/checkout@v4
+            
+            # Paso 2. Instalar dependencias
+            - name: Instalar .NET
+              uses: actions/setup-dotnet@v4
+              with:
+                dotnet-version: '8.0'
+            
+            - name: Verificar versión de Net Core
+              run: dotnet --version #Mi comando especifico              
